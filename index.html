@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Pictures</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" type="image/png" href="images\letter t.png"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header-container">
+            <div class="tabs-container">
+                <div class="tabs-links active-tabs-links" >
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="tabs-links">
+                    <a href="about.html">About Me</a>
+                </div>
+            </div>
+            <div class="nameplate-container">
+                Logan Perkins
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="travel-pictures">
+                <div class="travel-picture">
+                    <div class="travel-picture-background" style="background-image:url(images/Bangkok-streets.jpg)"></div>
+                    <div class="img-text">First touching down in Thailand</div>
+                </div>
+                <div class="travel-picture">
+                    <div class="travel-picture-background" style="background-image:url(images/drunk-sea-lion.jpg)"></div>
+                    <div class="img-text">A sea lion who couldnt handle his booze.</div>
+                </div>
+                <div class="travel-picture">
+                    <div class="travel-picture-background" style="background-image:url(images/ecuador-steps.jpg)"></div>
+                    <div class="img-text">500 stairs later...</div>
+                </div>
+                <div class="travel-picture">
+                    <div class="travel-picture-background" style="background-image:url(images/florida-beach.jpg)"></div>
+                    <div class="img-text">First time on a Florida beach since birth.</div>
+                </div>
+                <div class="travel-picture">
+                    <div class="travel-picture-background" style="background-image:url(images/Krabi-Beach.jpg)"></div>
+                    <div class="img-text">One of my favorite places in the world.</div>
+                </div>
+                <div class="travel-picture">
+                    <div class="travel-picture-background" style="background-image:url(images/party-boar.jpg)"></div>
+                    <div class="img-text">Fun times getting boated around Southern Thailand.</div>
+                </div>
+                <div class="travel-picture">
+                    <div class="travel-picture-background" style="background-image:url(images/Railay-Beach.jpg)"></div>
+                    <div class="img-text">Favorite picture I have ever taken</div>
+                </div>
+                <div class="travel-picture">
+                    <div class="travel-picture-background" style="background-image:url(images/spelunker.jpg)"></div>
+                    <div class="img-text">First time in a lava tunnel.</div>
+                </div>
+                <div class="travel-picture">
+                    <div class="travel-picture-background" style="background-image:url(images/waterfall-koh-sumui.jpg)"></div>
+                    <div class="img-text">Waterfalls on an island.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+  const allPhotos = document.querySelectorAll('.travel-picture')
+
+  allPhotos.forEach(allPhoto => {
+    allPhoto.addEventListener('mouseover', () => {
+       allPhoto.childNodes[1].classList.add('img-darken');
+    })
+  })
+
+  allPhotos.forEach(allPhoto => {
+    allPhoto.addEventListener('mouseout', () => {
+       allPhoto.childNodes[1].classList.remove('img-darken');
+    })
+  })
+</script>
+</html>
